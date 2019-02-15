@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXTogglePane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="20.799999237060547" prefHeight="60.0" prefWidth="900.0" style="-fx-background-color: #2C3E50;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="161.0" layoutX="373.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="366.0" AnchorPane.topAnchor="7.0">
+               <image>
+                  <Image url="@../res/icons/title_icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="currencyText" layoutX="727.0" layoutY="16.0" text="0" textFill="#ffc300" AnchorPane.topAnchor="16.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="698.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/icons/coin_icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="20.0" layoutY="21.0" text="Logged in as:" textFill="WHITE" />
+            <Label fx:id="usernameText" layoutX="97.0" layoutY="21.0" text="username" textFill="WHITE" />
+            <JFXButton fx:id="closeButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="864.0" layoutY="7.0" onAction="#onCloseView" prefHeight="26.0" prefWidth="0.0" text="Close" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../res/icons/close_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXTabPane layoutX="302.0" layoutY="59.0" prefHeight="541.0" prefWidth="900.0" tabMinWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <tabs>
+            <Tab text="Meme Stock Market">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="60.0" layoutY="152.0" prefHeight="504.0" prefWidth="85.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="815.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton fx:id="importButton" graphicTextGap="10.0" onAction="#onImportButtonClicked" prefHeight="50.0" prefWidth="85.0" text="Import" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/icons/import_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="dropTableButton" graphicTextGap="10.0" onAction="#onDropButtonClicked" prefHeight="50.0" prefWidth="85.0" text="Drop" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/icons/clear_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets right="6.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton fx:id="createTableButton" graphicTextGap="10.0" onAction="#onCreateTableClicked" prefHeight="50.0" prefWidth="85.0" text="Create" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/icons/add_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="logOutButton" graphicTextGap="8.0" onAction="#onLogOutClicked" prefHeight="50.0" prefWidth="85.0" text="Log Out" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/icons/sign_out_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="creditButton" graphicTextGap="10.0" onAction="#onCreditsClicked" prefHeight="50.0" prefWidth="85.0" text="Credits" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/icons/credits_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <AnchorPane layoutX="85.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="25.0" prefWidth="815.0" style="-fx-background-color: #666;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <HBox layoutY="25.0" prefHeight="50.0" prefWidth="815.0" spacing="15.0" style="-fx-background-color: #888;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                                 <children>
+                                    <JFXButton fx:id="callProcButton" graphicTextGap="10.0" onAction="#onCallProcButtonClicked" prefHeight="50.0" prefWidth="140.0" text="Call Procedure" textAlignment="CENTER">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../res/icons/call_proc_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <AnchorPane>
+                                       <children>
+                                          <JFXComboBox fx:id="callProcDropDown" layoutY="12.0" onAction="#onProcSelected" prefWidth="140.0" promptText="Select Procedure" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" prefHeight="50.0" prefWidth="100.0" text="Parameter" />
+                                    <AnchorPane>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <children>
+                                          <JFXTextField fx:id="procText" layoutY="12.0" promptText="Value" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXTogglePane prefHeight="50.0" prefWidth="90.0">
+                                       <children>
+                                          <JFXToggleButton fx:id="likeDislikeToggle" onAction="#onLikeDislikeToggle" prefHeight="45.0" prefWidth="151.0" text="Dislike">
+                                             <padding>
+                                                <Insets top="-2.0" />
+                                             </padding>
+                                          </JFXToggleButton>
+                                       </children>
+                                    </JFXTogglePane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="254.0" layoutY="69.0" prefHeight="70.0" prefWidth="815.0" style="-fx-background-color: #aaa;" AnchorPane.bottomAnchor="357.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                                 <children>
+                                    <Label fx:id="tableText" alignment="CENTER" prefHeight="70.0" prefWidth="161.0" text="TABLE">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <JFXButton graphicTextGap="10.0" prefHeight="70.0" prefWidth="90.0" text="Table">
+                                       <graphic>
+                                          <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../res/icons/table_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <AnchorPane>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <children>
+                                          <JFXComboBox fx:id="selectTable" layoutY="22.0" onAction="#onSelectTable" promptText="Select Table" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXButton graphicTextGap="10.0" prefHeight="70.0" prefWidth="100.0" text="Column">
+                                       <graphic>
+                                          <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../res/icons/column_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <AnchorPane>
+                                       <children>
+                                          <JFXComboBox fx:id="selectColumn" layoutY="22.0" onAction="#onSelectColumn" promptText="Select Column" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="67.0" text="Value" textAlignment="CENTER" />
+                                    <AnchorPane>
+                                       <children>
+                                          <JFXTextField fx:id="selectValueText" layoutY="22.0" prefWidth="74.0" promptText="Enter Value" />
+                                       </children>
+                                    </AnchorPane>
+                                    <JFXButton fx:id="searchButton" graphicTextGap="10.0" onAction="#onSearchClicked" prefHeight="70.0" prefWidth="108.0" text="Search">
+                                       <graphic>
+                                          <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../res/icons/search_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <AnchorPane layoutX="162.0" layoutY="144.0" prefHeight="358.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="145.0">
+                                 <children>
+                                    <TableView fx:id="msm_table" layoutX="174.0" layoutY="88.0" prefHeight="357.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="0.0" />
+                                    <AnchorPane layoutX="599.0" layoutY="33.0" prefHeight="357.0" prefWidth="216.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <AnchorPane prefWidth="215.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ImageView fx:id="memeImage" fitHeight="148.0" fitWidth="148.0" layoutX="39.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="30.0">
+                                                   <image>
+                                                      <Image url="@../res/icons/image_icon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="-46.0" layoutY="193.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="207.0">
+                                             <children>
+                                                <JFXTextArea fx:id="consoleTextArea" layoutX="23.0" layoutY="15.0" prefHeight="150.39999999999998" prefWidth="215.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Add Meme">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="307.0" layoutY="142.0" prefHeight="502.4" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="75.0" layoutY="33.0" text="Author:" />
+                              <Label layoutX="122.0" layoutY="33.0" text="Username" />
+                              <Label layoutX="75.0" layoutY="77.0" text="Meme Phrase" />
+                              <JFXTextField fx:id="memePhraseText" layoutX="166.0" layoutY="73.0" />
+                              <Label layoutX="75.0" layoutY="118.0" text="Is this Meme 18+" />
+                              <Label layoutX="75.0" layoutY="166.0" text="URL" />
+                              <JFXTextField fx:id="memeUrlText" layoutX="166.0" layoutY="162.0" />
+                              <JFXCheckBox fx:id="ageRestricted" layoutX="210.0" layoutY="118.0" text="18+" />
+                              <Label layoutX="81.0" layoutY="216.0" text="Template" />
+                              <Label layoutX="92.0" layoutY="261.0" text="Description" />
+                              <Label layoutX="100.0" layoutY="316.0" text="Tag" />
+                              <JFXTextArea fx:id="templateDescriptionText" layoutX="185.0" layoutY="223.0" prefHeight="60.0" prefWidth="161.0" />
+                              <JFXTextField fx:id="templateTagText" layoutX="143.0" layoutY="321.0" />
+                              <JFXButton fx:id="checkImageButton" layoutX="332.0" layoutY="171.0" onAction="#onCheckImageClicked" text="Check Image" />
+                              <Label layoutX="88.0" layoutY="14.0" text="Meme" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Invest">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

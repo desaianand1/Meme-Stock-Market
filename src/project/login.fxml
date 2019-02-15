@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="332.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <JFXTextField fx:id="usernameText" focusColor="#1bbc9b" layoutX="98.0" layoutY="228.0" prefHeight="26.0" prefWidth="159.0" promptText="Username" stylesheets="@../res/css/login_style.css" unFocusColor="#ffffff65" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="75.0" />
+            <JFXPasswordField fx:id="passwordText" focusColor="#1bbc9b" layoutX="98.0" layoutY="267.0" prefHeight="26.0" prefWidth="159.0" promptText="Password" stylesheets="@../res/css/login_style.css" unFocusColor="#ffffff66" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="75.0" />
+            <JFXButton fx:id="loginButton" defaultButton="true" layoutX="75.0" layoutY="336.0" onAction="#onLoginClicked" prefHeight="26.0" prefWidth="182.0" style="-fx-background-color: #1BBC9B;" text="Login" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="registerButton" layoutX="74.0" layoutY="336.0" onAction="#onRegisterClicked" prefHeight="26.0" prefWidth="182.0" style="-fx-background-color: #1BBC9B;" text="Register" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="74.6">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="nameText" focusColor="#1bbc9b" layoutX="98.0" layoutY="191.0" prefHeight="26.0" prefWidth="159.0" promptText="Name" stylesheets="@../res/css/login_style.css" unFocusColor="#ffffff66" visible="false" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="75.0" />
+            <ImageView fitHeight="151.0" fitWidth="192.0" layoutX="70.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/icons/Meme-Stock-Market-DB-Logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="registerPrompt" accessibleRole="HYPERLINK" layoutX="108.0" layoutY="307.0" onMouseClicked="#onRegisterPromptClicked" prefHeight="16.0" prefWidth="114.0" text="Not a member?  Register" textFill="#ffffff66" underline="true" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginPrompt" accessibleRole="HYPERLINK" layoutX="108.0" layoutY="307.0" onMouseClicked="#onLoginPromptClicked" prefHeight="16.0" prefWidth="122.0" text="Already a member?  Login" textFill="#ffffff66" underline="true" visible="false" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="nameIcon" fitHeight="15.0" fitWidth="15.0" layoutX="75.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../res/icons/name_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="75.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/icons/password_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="75.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/icons/username_icon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="closeButton" contentDisplay="GRAPHIC_ONLY" layoutX="303.0" layoutY="5.0" onAction="#onCloseView" prefHeight="0.0" prefWidth="0.0">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../res/icons/clear_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

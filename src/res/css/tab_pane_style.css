@@ -1,0 +1,136 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+ .jfx-tab-pane .tab-header-background {
+     -jfx-background-color: #2C3E50;
+ }
+
+ .-tab-pane .tab-header-area .tab-down-button {
+     -jfx-background-color: #2C3E50;
+
+ }
+
+ .jfx-tab-pane .tab-header-area .control-buttons-tab .jfx-rippler {
+     -jfx-rippler-fill: #263238;
+ }
+
+ .jfx-tab-pane .tab-header-area .tab-down-button:left {
+     -jfx-shape: "M 742,-37 90,614 Q 53,651 53,704.5 53,758 90,795 l 652,651 q 37,37 90.5,37 53.5,0 90.5,-37 l 75,-75 q 37,-37 37,-90.5 0,-53.5 -37,-90.5 L 512,704 998,219 q 37,-38 37,-91 0,-53 -37,-90 L 923,-37 Q 886,-74 832.5,-74 779,-74 742,-37 z";
+
+ }
+
+ .jfx-tab-pane .tab-header-area .tab-down-button:right {
+     -jfx-shape: "m 1099,704 q 0,-52 -37,-91 L 410,-38 q -37,-37 -90,-37 -53,0 -90,37 l -76,75 q -37,39 -37,91 0,53 37,90 l 486,486 -486,485 q -37,39 -37,91 0,53 37,90 l 76,75 q 36,38 90,38 54,0 90,-38 l 652,-651 q 37,-37 37,-90 z";
+ }
+
+
+ .jfx-tab-pane .headers-region > .tab-selected-line{
+     -jfx-pref-width: 1px !important;
+     -jfx-pref-height: 2px;
+ }
+
+ .jfx-tab-pane .headers-region > .tab > .jfx-rippler {
+     -jfx-rippler-fill: #32A79E;
+ }
+
+ .jfx-tab-pane .headers-region .tab-selected-line {
+     -jfx-background-color: #32A79E;
+ }
+
+
+ .jfx-tab-pane .headers-region .tab:closable {
+     -jfx-border-color: rgba(255,255,255, .87);
+     -jfx-border-width: 0 2 0 0;
+     -jfx-border-style: dotted;
+     -jfx-border-insets: 8 0 8 0;
+     -jfx-padding: 0 8 0 8;
+ }
+
+ .jfx-tab-pane .headers-region .tab .tab-container .tab-label {
+     -jfx-text-fill: rgba(255,255,255, .87);
+     -jfx-font-weight: BOLD;
+     -jfx-padding: 6 10 6 10;
+     -jfx-font-size: 16;
+ }
+ .jfx-tab-pane .headers-region .tab:closable .tab-container .tab-label{
+     -jfx-padding: 0 8 0 6;
+ }
+
+
+
+ .jfx-tab-pane .headers-region .tab:selected .tab-container .tab-label {
+     -jfx-text-fill: WHITE;
+ }
+
+#tabPane {
+
+
+}
+.tab .tab-label {
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #EBEAF0;
+
+}
+
+.tab{
+
+    -fx-background-color: #2C3E50;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-padding: 0 30 0 30;
+}
+
+.tab:selected
+{
+    -fx-background-color: #263238;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-width: 5 0 0 0;
+    -fx-border-color: #263238;
+
+
+
+}
+
+.tab:focused
+{
+  -fx-focus-color: transparent;
+
+
+}
+
+.tab-pane *.tab-header-background
+{
+    -fx-background-color: transparent;
+}
+
+.tab-pane:left *.tab-header-area
+{
+    -fx-background-insets: 0, 0 0 10;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+
+
+}
+
+.tab:selected .focus-indicator
+{
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}
