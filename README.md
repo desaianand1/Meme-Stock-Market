@@ -3,6 +3,6 @@ A Meme Stock Market database that allows you to add,share and trade memes. Built
 
 # GUI </br> 
 Login, Main Tab, Add Meme Tab
-![alt text](/gui_demo/login.png "Login")
-![alt text](/gui_demo/main_tab.png "Main Tab")
-![alt text](/gui_demo/add_meme_tab.png "Add Meme Tab")
+![alt text](/gui_demo/login.PNG "Login")
+![alt text](/gui_demo/main_tab.PNG "Main Tab")
+![alt text](/gui_demo/add_meme_tab.PNG "Add Meme Tab")
